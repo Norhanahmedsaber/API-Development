@@ -1,0 +1,292 @@
+{
+	"info": {
+		"_postman_id": "a66a4f14-278a-4ea5-9220-3316ab55b7f1",
+		"name": "Api Deployment Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27415544",
+		"_collection_link": "https://speeding-space-838517.postman.co/workspace/Nora~ac36b701-e126-47c3-b414-beb5fa67c0c8/collection/27415544-a66a4f14-278a-4ea5-9220-3316ab55b7f1?action=share&source=collection_link&creator=27415544"
+	},
+	"item": [
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n \"name\": \"Norhan\",\r\n \"email\": \"norhan3182010@gmail.com\",\r\n \"password\": \"Nora123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"email\": \"norhan3182010@gmail.com\",\r\n \"password\": \"Nora123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/signin",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refreshToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MWNlN2NkZWQxMDk3YzQ4ODY3Zjg0MCIsImlhdCI6MTcyOTk1MzI1NSwiZXhwIjoxNzMwNTU4MDU1fQ.kBoQioSITt30ooxnkXQcS2NUPSKSTlY27OKYTwaPebc\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/refresh-token",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"refresh-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createOrganization",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MWNlN2NkZWQxMDk3YzQ4ODY3Zjg0MCIsImlhdCI6MTcyOTk2MTIwMSwiZXhwIjoxNzI5OTYyMTAxfQ.oxOirU2DT1wB1Sj86PL8kpn0F_Zl2XDmAJCPqy228fs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"name\": \"schnider\",\r\n \"description\": \"Electrical\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/organization",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"organization"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "organization",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MWNlN2NkZWQxMDk3YzQ4ODY3Zjg0MCIsImlhdCI6MTcyOTk2MTIwMSwiZXhwIjoxNzI5OTYyMTAxfQ.oxOirU2DT1wB1Sj86PL8kpn0F_Zl2XDmAJCPqy228fs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/organization/{671d1d08acd2e7a9d96da153}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"organization",
+						"{671d1d08acd2e7a9d96da153}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteOrganization",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MWNlN2NkZWQxMDk3YzQ4ODY3Zjg0MCIsImlhdCI6MTcyOTk2MzUzNCwiZXhwIjoxNzI5OTY0NDM0fQ.c70dR8y8EOAR91fegNwEddsWI4AjABIf0P6cLVWl3jo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/organization/671d261b1489c4d249473869",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"organization",
+						"671d261b1489c4d249473869"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "organizations",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MWNlN2NkZWQxMDk3YzQ4ODY3Zjg0MCIsImlhdCI6MTcyOTk2MzUzNCwiZXhwIjoxNzI5OTY0NDM0fQ.c70dR8y8EOAR91fegNwEddsWI4AjABIf0P6cLVWl3jo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/organization",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"organization"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateOrganization",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MWNlN2NkZWQxMDk3YzQ4ODY3Zjg0MCIsImlhdCI6MTcyOTk2NDcxNywiZXhwIjoxNzI5OTY1NjE3fQ.yRF0tM3ghY4LMF39vkLs3VvwYKHHFwXBQE6EUQOZMHY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n \"name\": \"siemns\",\r\n \"description\": \"medical\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/organization/671d2c59e075c513cec93cdf",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"organization",
+						"671d2c59e075c513cec93cdf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invite",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MWNlN2NkZWQxMDk3YzQ4ODY3Zjg0MCIsImlhdCI6MTcyOTk2NTY3OCwiZXhwIjoxNzI5OTY2NTc4fQ.N6mnbIG0xelaaXvsZE2ek5M0LzhD6wQ1yriBHuiT9A0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"user_email\": \"norhan3182010@gmail.com\"    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/organization/671d2c59e075c513cec93cdf/invite",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"organization",
+						"671d2c59e075c513cec93cdf",
+						"invite"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
