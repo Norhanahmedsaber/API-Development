@@ -12,9 +12,7 @@ app.get('/', (req, res) => {
 });
 app.use(
     cors({
-      origin: 'http://localhost:5173', 
-      methods: ['GET', 'POST', 'PUT', 'DELETE'], 
-      credentials: true 
+      origin: '*', 
     })
   );
 app.use(userRoutes);
